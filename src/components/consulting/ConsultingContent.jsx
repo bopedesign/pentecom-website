@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React, { useState, useEffect, useRef } from 'react';
 import { useInView3 } from '../home/HomeSectionsA.jsx';
+import { IsoCube, IsoStage, IsoFloor, iso } from '../Iso.jsx';
 
 const useInViewC = () => { useInView3(); };
 

@@ -2036,4 +2036,4 @@ const ProofStats13 = () => {
   );
 };
 
-export { Hero3, WhyUs3, CtaBand3, Proof3, ProofStats13, Solutions3, useInView3 };
+export { Hero3, WhyUs3, CtaBand3, Proof3, ProofStats13, Solutions3, useInView3, SolutionIcon3 };
