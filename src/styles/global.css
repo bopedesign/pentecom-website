@@ -469,9 +469,9 @@ body[data-variant="dark"] {
   --ink-2: rgba(255,255,255,0.72);
   --ink-3: rgba(255,255,255,0.42);
   --ink-4: rgba(255,255,255,0.22);
-  --line:      rgba(234, 236, 240, 0.12);
-  --line-2:    rgba(234, 236, 240, 0.18);
-  --line-soft: rgba(234, 236, 240, 0.06);
+  --line:      rgba(234, 236, 240, 0.18);
+  --line-2:    rgba(234, 236, 240, 0.28);
+  --line-soft: rgba(234, 236, 240, 0.08);
 }
 
 body[data-variant="dark"] ::selection { background: rgba(125,154,239,0.30); color: #fff; }

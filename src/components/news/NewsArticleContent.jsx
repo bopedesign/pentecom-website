@@ -121,7 +121,7 @@ const ArticleHeader = ({ article }) => {
         </div>
       </div>
       <style>{`
-        .ar-header { padding: 16px 0 48px; }
+        .ar-header { padding: 26px 0 48px; border-bottom: 1px solid var(--line); }
         .ar-eyebrow {
           display: flex; align-items: center; gap: 12px;
           margin-bottom: 28px; color: var(--ink-3);
