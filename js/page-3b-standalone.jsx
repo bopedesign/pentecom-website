@@ -673,7 +673,7 @@ const Footer3 = () => {
       {/* 1. BRAND ROW */}
       <div className="footer-13-brand-row">
         <div className="footer-13-brand">
-          <a href="home14.html" style={{ display: "inline-flex", alignItems: "center", marginBottom: 20 }} aria-label="Pentecom">
+          <a href="/" style={{ display: "inline-flex", alignItems: "center", marginBottom: 20 }} aria-label="Pentecom">
             <img src={window.__resources.logo} alt="Pentecom. Experience. Expertise. Excellence." style={{ display: "block", height: 56, width: "auto" }} />
           </a>
           <p className="footer-13-tagline">

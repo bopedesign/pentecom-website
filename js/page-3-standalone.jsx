@@ -64,16 +64,15 @@ const NAV_ITEMS_3 = [
     { label: "Technical Writing & Illustrations", href: "#" },
     { label: "Auditing & Quality Assurance", href: "#" },
     { label: "Lifecycle Acquisition", href: "#" },
-    { label: "Consulting", href: "consulting.html" },
+    { label: "Consulting", href: "/consulting" },
     { label: "University of Pentecom", href: "#" },
   ]},
-  { label: "Our Work", href: "#process" },
-  { label: "Who We Are", href: "#who", submenu: [
-    { label: "Why teams rely on us", href: "#why" },
-    { label: "Iconography exploration", href: "icons-exploration.html" },
+  { label: "Our Work", href: "/#process" },
+  { label: "Who We Are", href: "/#who", submenu: [
+    { label: "Why teams rely on us", href: "/#why" },
   ]},
-  { label: "News", href: "news.html" },
-  { label: "Contact", href: "contact.html" },
+  { label: "News", href: "/news" },
+  { label: "Contact", href: "/contact" },
 ];
 
 /* =========================================================================
@@ -102,7 +101,7 @@ const SOLUTIONS_MEGA_3 = [
   { icon: "writing",    title: "Technical Writing & Illustrations", desc: "Engineering-grade docs and isometric vector artwork.",            href: "#" },
   { icon: "audit",      title: "Auditing & Quality Assurance",   desc: "Evidence-first reviews that auditors accept on first pass.",        href: "#" },
   { icon: "lifecycle",  title: "Lifecycle Acquisition",          desc: "Programs supported from RFP through sustainment.",                  href: "#" },
-  { icon: "consulting", title: "Consulting",                     desc: "Senior engineers on retainer — scoped, written advice.",            href: "consulting.html" },
+  { icon: "consulting", title: "Consulting",                     desc: "Senior engineers on retainer — scoped, written advice.",            href: "/consulting" },
   { icon: "university", title: "University of Pentecom",         desc: "Hands-on training in standards, tooling, and audit.",               href: "#" },
 ];
 
@@ -529,7 +528,7 @@ const Header3 = () => {
       </div>
       <header className="site-header-3">
         <div className="container site-header-3-inner">
-          <a href="home14.html" style={{ display: "inline-flex", alignItems: "center" }} aria-label="Pentecom">
+          <a href="/" style={{ display: "inline-flex", alignItems: "center" }} aria-label="Pentecom">
             <img src={window.__resources.logo} alt="Pentecom. Experience. Expertise. Excellence." style={{ display: "block", height: 48, width: "auto" }} />
           </a>
           <nav className="nav-center">
