@@ -19,7 +19,7 @@ const ArticleBreadcrumb = ({ article }) => (
       <li aria-current="page" className="ar-breadcrumb-current">{article.title}</li>
     </ol>
     <style>{`
-      .ar-breadcrumb { padding: 56px 0 0; }
+      .ar-breadcrumb { padding: 36px 0 0; }
       .ar-breadcrumb-list {
         list-style: none;
         padding: 0; margin: 0;
@@ -60,11 +60,6 @@ const ArticleHeader = ({ article }) => {
     <header className="ar-header">
       <div className="container">
         <div className="fade-up">
-          <div className="ar-eyebrow">
-            <span className="mono ar-eyebrow-cat">{article.cat}</span>
-            <span aria-hidden="true">▪</span>
-            <span className="mono">{article.tag}</span>
-          </div>
           <h1 className="mixed-weight ar-title">
             {half1} <em>{half2}</em>
           </h1>
@@ -126,7 +121,7 @@ const ArticleHeader = ({ article }) => {
         </div>
       </div>
       <style>{`
-        .ar-header { padding: 26px 0 48px; border-bottom: 1px solid var(--line); }
+        .ar-header { padding: 16px 0 48px; }
         .ar-eyebrow {
           display: flex; align-items: center; gap: 12px;
           margin-bottom: 28px; color: var(--ink-3);
