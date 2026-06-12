@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import HomeContent from '../components/home/HomeContent.jsx';
 ---
 
-<Layout title="Pentecom — Technical Publications & Data Services">
+<Layout title="Pentecom — Technical Publications & Data Services" variant="dark">
   <HomeContent client:load />
 </Layout>
+
+<script>document.body.dataset.variant = "dark";</script>
