@@ -1,22 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ConsultingContent from '../components/consulting/ConsultingContent.jsx';
 ---
 
 <Layout
   title="Consulting — Pentecom"
   description="Pentecom consulting services — senior engineers on retainer for S1000D, MIL-SPEC, and technical publications programs."
 >
-  <!-- Consulting page content goes here -->
-  <section style="padding: 120px 0; text-align: center; color: var(--ink-2);">
-    <div class="container">
-      <p class="mono" style="margin-bottom: 24px;">Consulting</p>
-      <h1 class="mixed-weight" style="font-size: var(--fs-h1); margin: 0 0 24px;">
-        Senior engineers, <em>on retainer.</em>
-      </h1>
-      <p style="font-size: 18px; color: var(--ink-2); max-width: 60ch; margin: 0 auto 40px;">
-        Scoped, written advice from practitioners who have run these programs before. No hand-off to a junior team.
-      </p>
-      <a href="/contact" class="btn">Start a project</a>
-    </div>
-  </section>
+  <ConsultingContent client:load />
 </Layout>

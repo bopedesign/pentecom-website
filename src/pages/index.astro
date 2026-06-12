@@ -1,19 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HomeContent from '../components/home/HomeContent.jsx';
 ---
 
 <Layout title="Pentecom — Technical Publications & Data Services">
-  <!-- Home page content goes here -->
-  <section style="padding: 120px 0; text-align: center; color: var(--ink-2);">
-    <div class="container">
-      <p class="mono" style="margin-bottom: 24px;">Home page content</p>
-      <h1 class="mixed-weight" style="font-size: var(--fs-h1); margin: 0 0 24px;">
-        Experience. <em>Expertise.</em> Excellence.
-      </h1>
-      <p style="font-size: 18px; color: var(--ink-2); max-width: 60ch; margin: 0 auto 40px;">
-        Pentecom delivers technical publications and data services for defense and aerospace programs — S1000D, MIL-SPEC, ATA authoring, conversion, and lifecycle support.
-      </p>
-      <a href="/consulting" class="btn">View Consulting Services</a>
-    </div>
-  </section>
+  <HomeContent client:load />
 </Layout>
