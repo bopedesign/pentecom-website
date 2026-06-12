@@ -1,0 +1,254 @@
+/* =========================================================================
+   Pentecom — Global CSS
+   ========================================================================= */
+
+/* BASE RESET */
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --bg:        #f2f1f0;
+  --bg-2:      #f5f4f3;
+  --bg-3:      #e8e7e6;
+  --surface:   #FFFFFF;
+  --ink:       #0e121c;
+  --ink-2:     #3a3e4a;
+  --ink-3:     #6a6e7a;
+  --ink-4:     #a0a4ae;
+  --line:      rgba(14, 18, 28, 0.10);
+  --line-2:    rgba(14, 18, 28, 0.18);
+  --line-soft: rgba(14, 18, 28, 0.05);
+  --dot:       rgba(14, 18, 28, 0.22);
+
+  --panel-lit:  #fafaf9;
+  --panel-edge: rgba(254, 253, 252, 0.5);
+
+  --pentecon-navy:  #203263;
+  --pentecon-blue:  #2f4d9e;
+  --pentecon-aqua:  #789fa1;
+  --pentecon-gold:  #e6c999;
+  --pentecon-white: #fef9fb;
+
+  --orb-h1: 225;
+  --orb-h2: 223;
+  --orb-h3: 184;
+
+  --font-mono: 'Geist Mono', 'IBM Plex Mono', 'SF Mono', Menlo, monospace;
+
+  --fs-mono: 13px;
+  --fs-body: 16px;
+  --fs-h3:   22px;
+  --fs-h2:   clamp(30px, 2.8vw, 44px);
+  --fs-h1:   clamp(40px, 4.4vw, 72px);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-size: var(--fs-body);
+  font-feature-settings: "ss01" on, "cv11" on;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* LAYOUT */
+.container {
+  width: 100%;
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 56px;
+}
+
+@media (max-width: 720px) {
+  .container { padding: 0 20px; }
+}
+
+/* TYPOGRAPHY UTILS */
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--ink-3);
+}
+
+.mixed-weight { font-weight: 300; letter-spacing: -0.028em; }
+.mixed-weight em { font-style: normal; font-weight: 600; }
+
+/* BUTTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 18px;
+  background: var(--pentecon-navy);
+  color: #fff;
+  border: 1px solid var(--pentecon-navy);
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 160ms ease, transform 160ms ease, box-shadow 200ms ease;
+}
+.btn:hover {
+  background: #2a3a78;
+  border-color: #2a3a78;
+  box-shadow: 0 8px 24px rgba(32, 50, 99, 0.22);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line-2);
+}
+.btn-ghost:hover {
+  background: rgba(32, 50, 99, 0.05);
+  box-shadow: none;
+  border-color: rgba(32, 50, 99, 0.32);
+}
+
+/* SECTIONS */
+.sec-pad { padding: 120px 0; }
+
+/* SCROLL ANIMATIONS */
+.fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 800ms ease, transform 800ms cubic-bezier(.2,.7,.2,1);
+}
+.fade-up.in-view { opacity: 1; transform: translateY(0); }
+
+.draw-line {
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 900ms cubic-bezier(.2,.7,.2,1);
+}
+.draw-line.in-view { transform: scaleX(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .fade-up { opacity: 1; transform: none; }
+  .draw-line { transform: scaleX(1); }
+}
+
+/* ANNOUNCE BAR */
+.announce-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+  padding: 9px 16px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.announce-light strong { color: var(--ink); font-weight: 500; }
+.announce-light a {
+  color: var(--pentecon-blue);
+  margin-left: 10px;
+  text-decoration: underline;
+  text-decoration-color: rgba(47, 77, 158, 0.4);
+  text-underline-offset: 3px;
+}
+
+/* HEADER */
+.site-header-3 {
+  position: fixed;
+  top: 36px;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(242, 241, 240, 0.78);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header-3-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: 84px;
+}
+
+.nav-center {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-center a {
+  font-size: 15px;
+  color: var(--ink-2);
+  transition: color 160ms ease;
+}
+.nav-center a:hover { color: var(--ink); }
+
+.nav-right { justify-self: end; }
+
+/* NAV MEGA TRIGGER — shared button base for all mega menu triggers */
+.nav-mega-3-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--ink-2);
+  font-family: inherit;
+  transition: color 160ms ease;
+}
+.nav-mega-3-trigger:hover,
+.nav-mega-3-trigger[aria-expanded="true"] { color: var(--ink); }
+
+.nav-mega-3-chev {
+  transition: transform 200ms ease;
+}
+.nav-mega-3-trigger[aria-expanded="true"] .nav-mega-3-chev {
+  transform: rotate(180deg);
+}
+
+/* NAV MEGA PANEL — shared panel base */
+.nav-mega-3-panel {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  right: 0;
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.18);
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: transform 240ms cubic-bezier(.2,.7,.2,1), opacity 200ms ease, visibility 0s linear 200ms;
+  z-index: 49;
+}
+.nav-mega-3-panel[data-open="true"] {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transition: transform 240ms cubic-bezier(.2,.7,.2,1), opacity 200ms ease, visibility 0s;
+}
+
+/* Page body offset for fixed header + announce bar */
+.page-body { padding-top: 120px; }
