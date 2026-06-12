@@ -1,0 +1,13 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NewsContent from '../../components/news/NewsContent.jsx';
+---
+
+<Layout
+  title="News — Pentecom"
+  description="Releases, postmortems, contract announcements, and field notes from the Pentecom team."
+>
+  <NewsContent client:load />
+</Layout>
+
+<script>document.body.dataset.variant = "dark";</script>

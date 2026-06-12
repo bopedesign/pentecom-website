@@ -293,7 +293,7 @@ const WHO_WE_ARE_ITEMS = [
   { icon: "timeline",   title: "Company Timeline",            desc: "From founding through the milestones that shaped today's practice.", href: "#" },
 ];
 const NEWS_ITEMS = [
-  { icon: "news",      title: "Current News",                 desc: "Releases, awards, contract announcements, and program milestones.", href: "#" },
+  { icon: "news",      title: "Current News",                 desc: "Releases, awards, contract announcements, and program milestones.", href: "/news" },
   { icon: "numbers",   title: "Pentecom By the Numbers",      desc: "Annual report: throughput, pass rates, committee seats, and people.", href: "#" },
   { icon: "one-pager", title: "Solution-Oriented One-Pagers", desc: "Printable single-sheet briefs you can send to a stakeholder.", href: "#" },
 ];

@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NewsArticleContent from '../../components/news/NewsArticleContent.jsx';
+import { ARTICLES } from '../../data/articles.js';
+
+export function getStaticPaths() {
+  return ARTICLES.map(a => ({
+    params: { slug: a.id },
+    props: { article: a },
+  }));
+}
+
+const { slug } = Astro.params;
+const { article } = Astro.props;
+---
+
+<Layout
+  title={`${article.title} — Pentecom`}
+  description={article.excerpt}
+>
+  <NewsArticleContent slug={slug} client:load />
+</Layout>
+
+<script>document.body.dataset.variant = "dark";</script>
