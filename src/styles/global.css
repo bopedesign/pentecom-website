@@ -488,6 +488,7 @@ body[data-variant="dark"] .announce-light {
 }
 body[data-variant="dark"] .site-header-3 {
   background: rgba(0,0,0,0.82) !important;
+  border-bottom: none !important;
 }
 body[data-variant="dark"] .btn {
   background: var(--pentecon-navy);

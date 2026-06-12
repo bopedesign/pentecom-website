@@ -19,7 +19,7 @@ const ArticleBreadcrumb = ({ article }) => (
       <li aria-current="page" className="ar-breadcrumb-current">{article.title}</li>
     </ol>
     <style>{`
-      .ar-breadcrumb { padding: 36px 0 0; }
+      .ar-breadcrumb { padding: 56px 0 0; }
       .ar-breadcrumb-list {
         list-style: none;
         padding: 0; margin: 0;
