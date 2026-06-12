@@ -406,7 +406,7 @@ const SOLUTIONS_H1 = [
     ),
   },
   {
-    num: "07", name: "Consulting", kind: "staircase", megaIcon: "consulting", href: "consulting.html",
+    num: "07", name: "Consulting", kind: "staircase", megaIcon: "consulting", href: "/consulting",
     desc: "Senior engineers on retainer",
     body: "Senior engineers on retainer. Scoped, written advice from people who have shipped what you're trying to ship.",
     iso: () => (
