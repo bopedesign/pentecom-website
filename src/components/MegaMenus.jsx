@@ -1,5 +1,20 @@
 import React, { useState, useRef, useEffect } from 'react';
 
+export const NavMega3SvgDefs = () => (
+  <svg width="0" height="0" style={{ position: "absolute" }} aria-hidden="true">
+    <defs>
+      <linearGradient id="g-sol-brand" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stopColor="#7d9aef" />
+        <stop offset="100%" stopColor="#2a3a78" />
+      </linearGradient>
+      <linearGradient id="g-sol-soft" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stopColor="#9ab2f3" />
+        <stop offset="100%" stopColor="#3d5cb8" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
 const NavMega3Icon = ({ kind, size = 22 }) => {
   const common = {
     width: size, height: size, viewBox: "0 0 48 48",

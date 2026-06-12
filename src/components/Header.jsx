@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useState as useState3, useEffect as useEffect3, useRef as useRef3 } from 'react';
-import { OurWorkMegaMenu3, WhoWeAreMegaMenu3, NewsMegaMenu3 } from './MegaMenus.jsx';
+import { OurWorkMegaMenu3, WhoWeAreMegaMenu3, NewsMegaMenu3, NavMega3SvgDefs } from './MegaMenus.jsx';
 import { SolutionIcon3 } from './home/HomeSectionsA.jsx';
 
 const NAV_ITEMS_3 = [
@@ -226,6 +226,7 @@ const NavDropdown3 = ({ label, href, submenu }) => {
 export default function Header() {
   return (
     <React.Fragment>
+      <NavMega3SvgDefs />
       <div className="announce-light">
         Supporting <strong>S1000D &amp; MIL-SPEC</strong>.<a href="#solutions">See capabilities →</a>
       </div>
